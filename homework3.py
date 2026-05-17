@@ -1,3 +1,10 @@
+def get_divisors(n):
+    divisors = []
+    for i in range(1, n+1):
+        if n % i == 0:
+            divisors.append(i)
+    return divisors
+
 while True:
     try:
         n = int(input("Введите натуральное число: "))
@@ -7,10 +14,5 @@ while True:
             print("Ошибка! Натуральное число должно быть больше ноля.")
     except ValueError:
         print("Ошибка! Введенное значение не соответствует условию. Попробуйте еще раз.")
-
-print(f"Вы ввели: {n}")
-print("Делители: ", end="")
-
-for i in range(1, n+1):
-    if n % i == 0:
-        print(i, end=" ")
+result = get_divisors(n)
+print("Делители: " + " ".join([str(i) for i in result]))
