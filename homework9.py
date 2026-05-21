@@ -1,5 +1,14 @@
 def password_check(password):
-    # 1. Задаем переменные
+    """
+    Проверяет пароль на соответствие заданным условиямю
+
+    Args:
+        password (str): входной текст для анализа
+
+    Returns:
+        dict: словарь с результатами проверки
+    """
+    # 1. Задаем переменные условий проверки и задаем по умолчанию как False
     strong = length = has_upper = has_lower = has_digit = has_special = False
     # 2. Проверяем длину, должно быть >= 8 символов
     if len(password) >= 8:
